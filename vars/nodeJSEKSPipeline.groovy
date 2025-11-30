@@ -5,7 +5,7 @@ def call(Map configMap){
             PROJECT = configMap.get('project')
             COMPONENT = configMap.get('component')
             appVersion = ''
-            ACC_ID = '315069654700'
+            ACC_ID = '695862934667'
         }
         options {
             disableConcurrentBuilds()
