@@ -1,3 +1,5 @@
+// search in google as "jenkins shared library example" -->  GSA/jenkins-shared-library-examples --> vars --> example1.groovy
+// call is the default function
 def call(Map configMap){
     pipeline {
         agent { label 'AGENT-1' }
@@ -82,7 +84,7 @@ def call(Map configMap){
                 }
                 steps{
                     build job: "../${component}-cd", parameters: [string(name: 'version', value: "${appVersion}")], wait: true
-                }
+                } // ../ means "one step back". pipeline come "one step back" form feature branch to EXPENSE folder
             }
         }
         post { 

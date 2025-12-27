@@ -2,6 +2,7 @@ def call(Map configMap){
     pipeline {
         agent { label 'AGENT-1' }
         environment { 
+            // we get value from the jenkins file and alloted to the greeting
             greeting = configMap.get('greeting')
         }
         options {
@@ -35,3 +36,7 @@ def call(Map configMap){
         }
     }
 }
+
+// def runPipeline{
+
+// }
